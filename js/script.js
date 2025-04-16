@@ -30,30 +30,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // GLOBAL Google Maps Init Function
 function initMap() {
-  const location = { lat: 41.8663, lng: -87.6068 }; // IIT Campus
+  const location = { lat: 41.8349, lng: -87.6270 }; // IIT Bronzeville Campus
 
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 14,
+    zoom: 16,
     center: location,
   });
 
-  // Feature 1: Marker
   const marker = new google.maps.Marker({
     position: location,
     map: map,
-    title: "IIT Campus",
+    title: "IIT Bronzeville Campus",
   });
 
-  // Feature 2: Info Window
   const infoWindow = new google.maps.InfoWindow({
-    content: "<h3>IIT Campus</h3><p>Peter studies here!</p>",
+    content: "<h3>IIT Main Campus</h3><p>Located in Bronzeville, Chicago.</p>",
   });
 
   marker.addListener("click", () => {
     infoWindow.open(map, marker);
   });
 
-  // Feature 3: Traffic Layer
   const trafficLayer = new google.maps.TrafficLayer();
   trafficLayer.setMap(map);
 }
