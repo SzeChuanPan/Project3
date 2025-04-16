@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleBtn.textContent = "Toggle Skills";
     toggleBtn.style.margin = "10px";
     toggleBtn.style.padding = "10px";
-    document.body.insertBefore(toggleBtn, skillsSection);
+    skillsSection.parentNode.insertBefore(toggleBtn, skillsSection);
     toggleBtn.addEventListener("click", () => {
       skillsSection.style.display = skillsSection.style.display === "none" ? "block" : "none";
     });
