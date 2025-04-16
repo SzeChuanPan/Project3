@@ -125,3 +125,46 @@ footer {
   margin: 0 auto;
   padding: 1rem;
 }
+/* Tablet View: 768px and up */
+@media (min-width: 768px) {
+  body {
+    background-color: #f2f2f2;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  img {
+    max-width: 80%;
+    border-radius: 10px;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop View: 1024px and up */
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  nav {
+    max-width: 1200px;
+    margin: auto;
+  }
+  body {
+    background-color: #ffffff;
+    font-size: 18px;
+  }
+  img {
+    max-width: 60%;
+  }
+}
